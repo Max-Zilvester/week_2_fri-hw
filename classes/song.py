@@ -8,6 +8,10 @@ class Song:
     def song_has_title(self):
         return "Clint Eastwood"
 
-    # 3 pass test song has artist
+    # 4 pass test song has artist
     def song_has_artist(self):
         return "Gorillaz"
+
+    # 5 pass test song has artist
+    def song_has_genre(self):
+        return "Electropop"

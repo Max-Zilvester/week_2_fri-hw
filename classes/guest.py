@@ -4,10 +4,10 @@ class Guest:
         self.wallet = wallet
         self.age = age
 
-    # pass test guest has name
+    # 1 pass test guest has name
     def guest_has_name(self):
         return "Frank Samson"
 
-    # pass test guest has wallet
+    # 2 pass test guest has wallet
     def guest_has_wallet(self):
         return 50
