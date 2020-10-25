@@ -20,10 +20,15 @@ class Guest:
     def book_room(self, room):
         self.wallet -= room.price
 
-     # check_in
+    # 11 pass test guest check_in
     def check_in(self, room):
         if self.wallet > room.price and room.availability == 0:
             room.availability += 1
+
+    # 12 pass test guest check_out
+    def check_out(self, room):
+        if self.wallet > room.price and room.availability == 1:
+            room.availability -= 1
     #     if self.age >= 17:
     #         self.room.availability == 1
 

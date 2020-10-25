@@ -30,11 +30,17 @@ class TestGuest(unittest.TestCase):
         self.guest.book_room(self.room)
         self.assertEqual(20, self.guest.wallet)
 
-    # customer checks in
+    # 11 guest checks in
     def test_guest_check_in(self):
         #self.room_has_availability(self.room)
         self.guest.check_in(self.room)
         self.assertEqual(1, self.room.availability)
+
+    # 12 guest checks out
+    def test_guest_check_out(self):
+        #self.room_has_availability(self.room)
+        self.guest.check_out(self.room)
+        self.assertEqual(0, self.room.availability)
 
     # test guest can check in
     # def test_guest_can_check_in(self):
