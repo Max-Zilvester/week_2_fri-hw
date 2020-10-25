@@ -4,14 +4,14 @@ class Song:
         self.artist = artist
         self.genre = genre
 
-    # 3 pass test song has title
+    # 4 pass test song has title
     def song_has_title(self):
         return "Clint Eastwood"
 
-    # 4 pass test song has artist
+    # 5 pass test song has artist
     def song_has_artist(self):
         return "Gorillaz"
 
-    # 5 pass test song has artist
+    # 6 pass test song has genre
     def song_has_genre(self):
         return "Electropop"
