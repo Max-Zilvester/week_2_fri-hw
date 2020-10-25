@@ -4,6 +4,7 @@ class Guest:
         self.wallet = wallet
         self.age = age
         self.playlist = playlist
+        
 
     # 1 pass test guest has name
     def guest_has_name(self):
@@ -30,10 +31,8 @@ class Guest:
     def check_out(self, room):
         if self.wallet > room.price and room.availability == 1:
             room.availability -= 1
-    #     if self.age >= 17:
-    #         self.room.availability == 1
 
-    # pass test guest has favourite song.
+    # 14 pass test guest has favourite song.
     def guest_has_favourite_song(self):
         return self.playlist
 

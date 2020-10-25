@@ -4,7 +4,6 @@ class Room:
         self.price = price
         self.availability = availability
         self.playlist = playlist
-
         self.booking = []
 
     # 7 pass test room has number
@@ -22,11 +21,8 @@ class Room:
     # 13  pass test room has playlist
     def room_has_playlist(self):
         return self.playlist
-   
-    
 
-    # #  pass test guest can book room
-    # def book_room(self, guest1):
-    #     if guest1.age >= 18:
-    #         self.availability == True
-        
+    # 15  pass test add song to room
+    def add_song_to_room(self, song):
+        if self.availability == 1:
+            self.booking.append(song)

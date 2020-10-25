@@ -57,7 +57,8 @@ class TestGuest(unittest.TestCase):
         self.assertEqual(self.song3, self.guest.playlist)
 
 
-    
+    # def test_guest_has_favourite_song
+    # 
 
     # test guest can check in
     # def test_guest_can_check_in(self):
@@ -73,9 +74,3 @@ class TestGuest(unittest.TestCase):
 
     #     self.assertEqual(30, self.room1.availability)
 
-    #
-
-    # def test_add_song_to_list(self):
-    #     new_song = Song("Bohemian Rhapsody", "Queen", 1975, Genre.POP)
-    #     self.dukebox.add_song_to_songs(new_song)
-    #     self.assertEqual("Bohemian Rhapsody", self.dukebox.songs[-1].name)  ### works fine

@@ -39,9 +39,8 @@ class TestRoom(unittest.TestCase):
     def test_room_has_playlist(self):
         self.assertEqual(2, len(self.room.playlist))
 
-    ## test add songs to room
+    # 15 test add songs to room
+    def test_add_song_to_room(self):
+        self.room.add_song_to_room(self)
+        self.assertEqual([], self.room2.booking)
 
-    # # 9 test guest can check in
-    # def test_guest_can_book_room__check_age(self):
-    #     self.room.guest_age(self.age, self.guest1)
-    #     self.assertEqual(30, self.room1.availability)
