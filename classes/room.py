@@ -1,8 +1,10 @@
 class Room:
-    def __init__(self, number, price, availability):
+    def __init__(self, number, price, availability, playlist):
         self.number = number
         self.price = price
         self.availability = availability
+        self.playlist = playlist
+
         self.booking = []
 
     # 7 pass test room has number
@@ -17,6 +19,9 @@ class Room:
     def room_has_price(self):
         return self.price
 
+    # 13  pass test room has playlist
+    def room_has_playlist(self):
+        return self.playlist
    
     
 

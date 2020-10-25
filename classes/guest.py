@@ -1,8 +1,9 @@
 class Guest:
-    def __init__(self, name, wallet, age):
+    def __init__(self, name, wallet, age, playlist):
         self.name = name
         self.wallet = wallet
         self.age = age
+        self.playlist = playlist
 
     # 1 pass test guest has name
     def guest_has_name(self):
@@ -31,6 +32,10 @@ class Guest:
             room.availability -= 1
     #     if self.age >= 17:
     #         self.room.availability == 1
+
+    # pass test guest has favourite song.
+    def guest_has_favourite_song(self):
+        return self.playlist
 
     # def add_stock(self, quantity=1):
     #     self.stock += quantity

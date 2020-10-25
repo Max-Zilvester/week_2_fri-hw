@@ -1,15 +1,25 @@
 import unittest
 from classes.room import Room
 from classes.guest import Guest
+from classes.song import Song
 
 class TestRoom(unittest.TestCase):
 
     def setUp(self):
-        self.guest = Guest("Frank Samson", 50.00, 30)
-        self.room = Room("300", 30.00, 0)
-        self.room2 = Room("301", 25.00, 1)
-        self.room3 = Room("302",20.00, 1)
-        self.room4 = Room("303", 30.00, 0)
+
+        self.song = Song("Clint Eastwood", "Gorrilaz", "Electropop")
+        self.song2 = Song("All Eyez On Me", "Tupac", "Rap")
+        self.song3 = Song("Timeless", "Il Divo", "Classical")
+        self.song4 = Song("Hurt", "Johnny Cash", "Country")
+        self.song5 = Song("Mustang Sally", "Wilson Pinkett", "Blues")
+        self.song6 = Song("Think Twice", "Celine Dion", "Soft Rock")
+        self.song7 = Song("Bye Bye", "Mariah Carey", "R&B")
+        self.song8 = Song("Perfect", "Ed Sheeran", "Pop")
+        self.guest = Guest("Frank Samson", 50.00, 30, self.song)
+        self.room = Room("300", 30.00, 0, [self.song, self.song2])
+        self.room2 = Room("301", 25.00, 1, [self.song3, self.song4])
+        self.room3 = Room("302", 20.00, 1, [self.song5, self.song6])
+        self.room4 = Room("303", 30.00, 0, [self.song7, self.song8])
         
         
 
@@ -24,6 +34,12 @@ class TestRoom(unittest.TestCase):
     # 9 test room has price
     def test_room_has_price(self):
         self.assertEqual(30, self.room.price)
+
+    # 13 test room has playlist
+    def test_room_has_playlist(self):
+        self.assertEqual(2, len(self.room.playlist))
+
+    ## test add songs to room
 
     # # 9 test guest can check in
     # def test_guest_can_book_room__check_age(self):

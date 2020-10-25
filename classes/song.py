@@ -6,12 +6,12 @@ class Song:
 
     # 4 pass test song has title
     def song_has_title(self):
-        return "Clint Eastwood"
+        return self.title
 
     # 5 pass test song has artist
     def song_has_artist(self):
-        return "Gorillaz"
+        return self.artist
 
     # 6 pass test song has genre
     def song_has_genre(self):
-        return "Electropop"
+        return self.genre
